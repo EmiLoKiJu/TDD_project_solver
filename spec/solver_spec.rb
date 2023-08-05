@@ -13,8 +13,8 @@ RSpec.describe Solver do
       expect(solver.factorial(0)).to eq(1)
     end
 
-    it 'should return -1 when the number given is less than 0' do
-      expect(solver.factorial(-5)).to eq(-1)
+    it 'should raise exception when the number given is less than 0' do
+      expect{ solver.factorial(-5) }.to raise_exception(RuntimeError)
     end
   end
 

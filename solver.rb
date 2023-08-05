@@ -1,6 +1,6 @@
 class Solver
   def factorial(num)
-    return -1 if num.negative?
+    raise 'Number given must be greather than 0' if num.negative?
 
     result = 1
     while num > 1
