@@ -15,7 +15,17 @@ class Solver
     return word.reverse
   end
 
-  def fizzbuzz
-    return n
+  def fizzbuzz(n)
+    result = ''
+    if n%3 == 0
+      result += 'fizz'
+    end
+    if n%5 == 0
+      result += 'buzz'
+    end
+    if result == ''
+      result = n.to_s
+    end
+    return result
   end
 end

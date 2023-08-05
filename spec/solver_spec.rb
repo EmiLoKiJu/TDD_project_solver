@@ -35,7 +35,7 @@ RSpec.describe Solver do
     it 'should return buzz when N is divisible by 5' do
       expect(solver.fizzbuzz(5)).to eq('buzz')
       expect(solver.fizzbuzz(50)).to eq('buzz')
-      expect(solver.fizzbuzz(25)).to eq('buzz')4
+      expect(solver.fizzbuzz(25)).to eq('buzz')
     end
 
     it 'should return fizzbuzz when N is divisible by 3 and 5' do
@@ -48,4 +48,5 @@ RSpec.describe Solver do
       expect(solver.fizzbuzz(34)).to eq('34')
       expect(solver.fizzbuzz(82)).to eq('82')
     end
+  end
 end
