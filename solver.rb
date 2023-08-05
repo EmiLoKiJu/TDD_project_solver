@@ -1,13 +1,13 @@
 class Solver
   def factorial(num)
-    if num.negative?
-      return -1
-    end
+    return -1 if num.negative?
+
     result = 1
     while num > 1
       result *= num
       num -= 1
     end
+
     result
   end
 
@@ -17,15 +17,9 @@ class Solver
 
   def fizzbuzz(num)
     result = ''
-    if (num % 3).zero?
-      result += 'fizz'
-    end
-    if (num % 5).zero?
-      result += 'buzz'
-    end
-    if result.empty?
-      result = num.to_s
-    end
+    result += 'fizz' if (num % 3).zero?
+    result += 'buzz' if (num % 5).zero?
+    result = num.to_s if result.empty?
     result
   end
 end
