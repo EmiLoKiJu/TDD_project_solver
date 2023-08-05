@@ -1,4 +1,4 @@
-require_relative '../solver.rb'
+require_relative '../solver'
 
 RSpec.describe Solver do
   let(:solver) { Solver.new }
@@ -6,7 +6,7 @@ RSpec.describe Solver do
   context '#factorial' do
     it 'should return the right value when given an integer greater than 1' do
       expect(solver.factorial(3)).to eq(6)
-      expect(solver.factorial(8)).to eq(40320)
+      expect(solver.factorial(8)).to eq(40_320)
     end
 
     it 'should return 1 when the number given is 0' do

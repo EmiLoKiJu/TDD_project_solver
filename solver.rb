@@ -1,31 +1,31 @@
 class Solver
-  def factorial(n)
-    if n < 0 
+  def factorial(num)
+    if num.negative?
       return -1
     end
     result = 1
-    while n > 1 do
-      result *= n
-      n -= 1
+    while num > 1
+      result *= num
+      num -= 1
     end
-    return result
+    result
   end
 
   def reverse(word)
-    return word.reverse
+    word.reverse
   end
 
-  def fizzbuzz(n)
+  def fizzbuzz(num)
     result = ''
-    if n%3 == 0
+    if (num % 3).zero?
       result += 'fizz'
     end
-    if n%5 == 0
+    if (num % 5).zero?
       result += 'buzz'
     end
-    if result == ''
-      result = n.to_s
+    if result.empty?
+      result = num.to_s
     end
-    return result
+    result
   end
 end
