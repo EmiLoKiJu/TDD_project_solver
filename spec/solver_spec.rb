@@ -24,4 +24,28 @@ RSpec.describe Solver do
       expect(solver.reverse('aleluyah')).to eq('hayulela')
     end
   end
+
+  context '#fizzbuzz' do
+    it 'should return fizz when N is divisible by 3' do
+      expect(solver.fizzbuzz(3)).to eq('fizz')
+      expect(solver.fizzbuzz(9)).to eq('fizz')
+      expect(solver.fizzbuzz(33)).to eq('fizz')
+    end
+
+    it 'should return buzz when N is divisible by 5' do
+      expect(solver.fizzbuzz(5)).to eq('buzz')
+      expect(solver.fizzbuzz(50)).to eq('buzz')
+      expect(solver.fizzbuzz(25)).to eq('buzz')4
+    end
+
+    it 'should return fizzbuzz when N is divisible by 3 and 5' do
+      expect(solver.fizzbuzz(15)).to eq('fizzbuzz')
+      expect(solver.fizzbuzz(75)).to eq('fizzbuzz')
+    end
+
+    it 'should return N when N is not divisible by 3 or 5' do
+      expect(solver.fizzbuzz(8)).to eq('8')
+      expect(solver.fizzbuzz(34)).to eq('34')
+      expect(solver.fizzbuzz(82)).to eq('82')
+    end
 end
